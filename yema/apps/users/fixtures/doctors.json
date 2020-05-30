@@ -1,0 +1,41 @@
+[{
+    "model": "users.doctor",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$180000$LLhkNbm6r5Xi$ur+/g7ONwfjW+L4zyj76/9b8k4sBBWFruTgQBTNaPiI=",
+      "last_login": "2020-05-28T05:55:13.690Z",
+      "is_superuser": true,
+      "username": "doctor1",
+      "first_name": "Jonh",
+      "last_name": "Doe",
+      "email": "doctor1@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2020-05-28T05:55:05.503Z",
+      "is_patient": false,
+      "is_doctor": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.doctor",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$180000$LLhkNbm6r5Xi$ur+/g7ONwfjW+L4zyj76/9b8k4sBBWFruTgQBTNaPiI=",
+      "last_login": "2020-05-28T05:55:13.690Z",
+      "is_superuser": true,
+      "username": "doctor2",
+      "first_name": "Jonh",
+      "last_name": "Doe",
+      "email": "doctor2@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2020-05-28T05:55:05.503Z",
+      "is_patient": false,
+      "is_doctor": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]
