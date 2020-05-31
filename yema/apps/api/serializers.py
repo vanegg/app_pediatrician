@@ -14,14 +14,23 @@ class AppointmentDetailSerializer(serializers.HyperlinkedModelSerializer):
             }
         }
 
-class DoctorSerializer(serializers.ModelSerializer):
-    user = serializers.PrimaryKeyRelatedField(queryset=User.objects.all())
-    class Meta:
-        model = Doctor
-        fields = '__all__'
+    def create(self, validated_data):
+        return Appointment.objects.create(**validated_data)
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
         fields = ('first_name', 'last_name', 'email', 'username')
+
+
+class DoctorSerializer(serializers.ModelSerializer):
+    user = UserSerializer()
+
+    class Meta:
+        model = Doctor
+        fields = '__all__'
+
+    def create(self, validated_data):
+        user = User.objects.create(**validated_data['user'])
+        return Doctor.objects.create(user=user)
