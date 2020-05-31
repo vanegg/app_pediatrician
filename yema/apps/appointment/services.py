@@ -1,6 +1,7 @@
 from django.core.mail import send_mass_mail
 from django.core import mail
 from yema.apps.users.models import User
+from django.utils.translation import gettext_lazy as _
 
 
 class MailAppointmentService():
@@ -11,12 +12,16 @@ class MailAppointmentService():
 
     def __build_mails(self, appointments):
         mails = []
-        subject_base = "Appointment Confirmation id: %s"
-        comments_base = "Hi Dr %s: \nYou have a new appointment of %s, \nDate: %s \nComments: %s \nPlease accept/reject it :)"
+        subject_base = _("Appointment Confirmation id: %(id)s")
+        comments_base = _("Hi Dr %(name)s: \nYou have a new appointment of %(email)s, \nDate: %(date)s - %(time)s \nComments: %(comments)s \nPlease accept/reject it :)")
 
         for appointment in appointments:
-            mail_tuple = (subject_base % (appointment.id), 
-                    comments_base % (appointment.doctor_name, appointment.email, appointment.appointment_date, appointment.comments),
+            mail_tuple = (subject_base % { 'id': appointment.id }, 
+                          comments_base % {'name': appointment.doctor_name, 
+                                            'email': appointment.email, 
+                                            'date' : appointment.date, 
+                                            'time' : appointment.time, 
+                                            'comments' : appointment.comments},
                     'hola@yema.com', 
                     [appointment.doctor_email])
             mails.append(mail_tuple)

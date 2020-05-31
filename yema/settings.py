@@ -10,9 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 import os
 import sys
+import django_filters.rest_framework
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -133,18 +134,20 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 AUTH_USER_MODEL = 'users.User'
 
-LOCALE_PATHS = (os.path.join(BASE_DIR, 'locale'),)
+
+SITE_ROOT=os.path.join(os.path.dirname(os.path.realpath(__name__)), 'yema')
+LOCALE_PATHS = (os.path.join(SITE_ROOT, 'locale'),)
 
 LANGUAGES = [
-    ('es',    _('Spanish')),
     ('es-mx', _('Mexican Spanish')),
+    ('es',    _('Spanish')),
     ('en',    _('English')),
 ]
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.SessionAuthentication',
-    ),
+    )
 }
 
 FIXTURE_DIRS = (

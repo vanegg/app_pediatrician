@@ -5,6 +5,7 @@ from .models import Appointment
 from .forms import AppointmentForm
 from .services import MailAppointmentService
 from yema.apps.users.models import User
+from django.utils.translation import gettext_lazy as _
 
 
 class AppointmentAdmin(admin.ModelAdmin):
@@ -21,15 +22,15 @@ class AppointmentAdmin(admin.ModelAdmin):
 
     def accept_appointment(self, request, queryset):
         self.__update_status_appointment(request, queryset, 'approved')
-    accept_appointment.short_description = "Accept appointment"
+    accept_appointment.short_description = _('accept_appointment')
 
     def reject_appointment(self, request, queryset):
         self.__update_status_appointment(request, queryset, 'rejected')
-    reject_appointment.short_description = "Reject appointment"
+    reject_appointment.short_description = _('reject_appointment')
 
     def complete_appointment(self, request, queryset):
         self.__update_status_appointment(request, queryset, 'completed')
-    complete_appointment.short_description = "Complete appointment"
+    complete_appointment.short_description = _('completed_appointment')
 
 
     def __update_status_appointment(self, request, queryset, status):
@@ -42,7 +43,7 @@ class AppointmentAdmin(admin.ModelAdmin):
 
     def send_email_to_doctor(self, request, queryset):
         MailAppointmentService().send(queryset)
-    send_email_to_doctor.short_description = 'Send email to doctor'
+    send_email_to_doctor.short_description = _('send_email_doctor')
 
 
 admin.site.register(Appointment, AppointmentAdmin)

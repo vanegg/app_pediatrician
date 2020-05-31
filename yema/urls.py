@@ -13,16 +13,21 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
+from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 from django.urls import path, include
+from django.utils.translation import gettext_lazy as _
 
-admin.site.site_header = 'Yema Test Vanessa GG'
-admin.site.site_title = 'Yema Test Vanessa GG'
-admin.site.index_title = 'Bienvenido al admin de Yema Test'
+admin.site.index_title = _('My Index Title')
+admin.site.site_header = _('My Site Administration')
+admin.site.site_title = _('My Site Management')
 
-urlpatterns = [
+
+urlpatterns = i18n_patterns(
     path('admin/', admin.site.urls),
     # path('', apps.api.urls),
     # path('appointments/', include('yema.apps.appointment.urls')),
     path('', include('yema.apps.api.urls')),
-]
+    prefix_default_language = True
+)

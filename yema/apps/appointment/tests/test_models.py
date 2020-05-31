@@ -1,6 +1,7 @@
 from django.test import TestCase
 from ..models import Appointment
 from django.utils import timezone
+from django.utils.translation import gettext_lazy as _
 
 class AppointmentTest(TestCase):
      def setUp(self):

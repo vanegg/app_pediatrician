@@ -6,13 +6,14 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: django\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-31 01:22-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: en\n"
+"PO-Revision-Date: 2017-09-19 16:41+0000\n"
+"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"Language-Team: Spanish (Mexico) (http://www.transifex.com/django/django/"
+"language/es_MX/)\n"
+"Language: es_MX\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,71 +21,71 @@ msgstr ""
 
 #: yema/apps/appointment/admin.py:25
 msgid "accept_appointment"
-msgstr "Accept Appointment"
+msgstr "Aceptar cita"
 
 #: yema/apps/appointment/admin.py:29
 msgid "reject_appointment"
-msgstr "Reject Appointment"
+msgstr "Rechazar cita"
 
 #: yema/apps/appointment/admin.py:33
 msgid "completed_appointment"
-msgstr "Complete appointment"
+msgstr "Completar cita"
 
 #: yema/apps/appointment/admin.py:39
 #, python-format
 msgid "%d story was successfully updated."
 msgid_plural "%d stories were successfully updated."
-msgstr[0] "%d appointment was successfully updated."
-msgstr[1] "%d appointments were successfully updated."
+msgstr[0] "%d cita fue actualiza con éxito"
+msgstr[1] "%d citas fueron actualizas con éxito"
 
 #: yema/apps/appointment/admin.py:46
 msgid "send_email_doctor"
-msgstr "Send email to doctor"
+msgstr "Enviar correo al doctor"
 
 #: yema/apps/appointment/apps.py:7 yema/apps/appointment/models.py:37
 msgid "appointment"
-msgstr "Appointment"
+msgstr "Cita"
 
 #: yema/apps/appointment/models.py:10
 msgid "validating"
-msgstr "Validating"
+msgstr "Validando"
 
 #: yema/apps/appointment/models.py:11
 msgid "approved"
-msgstr "Approved"
+msgstr "Aprobada"
 
 #: yema/apps/appointment/models.py:12
 msgid "rejected"
-msgstr "Rejected"
+msgstr "Rechazada"
 
 #: yema/apps/appointment/models.py:13
 msgid "completed"
-msgstr "Completed"
+msgstr "Completada"
 
 #: yema/apps/appointment/models.py:18 yema/apps/users/models.py:33
 msgid "doctor"
-msgstr "Doctor"
+msgstr "Pediatra"
 
 #: yema/apps/appointment/models.py:20
 msgid "comments"
-msgstr "Comments"
+msgstr "Comentarios"
 
 #: yema/apps/appointment/models.py:23
 msgid "appointment_date"
-msgstr "Appointment Date"
+msgstr "Fecha de la cita"
 
 #: yema/apps/appointment/models.py:24
 msgid "appointment_hour"
-msgstr "Appointment Hour"
+msgstr "Hora de la cita"
 
 #: yema/apps/appointment/models.py:38
 msgid "appointments"
-msgstr "Appointments"
+msgstr "Cita"
 
 #: yema/apps/appointment/services.py:15
 #, python-format
 msgid "Appointment Confirmation id: %(id)s"
-msgstr "Appointment Confirmation id: %(id)s"
+msgstr "Confirmación de Cita con id: %(id)s"
 
 #: yema/apps/appointment/services.py:16
 #, python-format
@@ -95,48 +96,52 @@ msgid ""
 "Comments: %(comments)s \n"
 "Please accept/reject it :)"
 msgstr ""
-"Hi Dr %(name)s: \n"
-"You have a new appointment of %(email)s, \n"
-"Date: %(date)s - %(time)s \n"
-"Comments: %(comments)s \n"
-"Please accept/reject it :)"
+"Hola Dr %(name)s: \n"
+"Tiene una nueva cita del correo %(email)s, \n"
+"En la fecha: %(date)s - %(time)s \n"
+"Comentarios: %(comments)s \n"
+"Por favor acepte o rechace la cita :)"
 
 #: yema/apps/appointment/validators.py:9
 #, python-format
 msgid "%(value)s date_future"
-msgstr "%(value)s must be in future"
+msgstr "%(value)s debe ser una fecha futura"
+
+#: yema/apps/users/apps.py:7
+msgid "users"
+msgstr "usuarios"
 
 #: yema/apps/users/models.py:19 yema/apps/users/models.py:41
 msgid "user"
-msgstr "User"
+msgstr "usuario"
 
 #: yema/apps/users/models.py:34
 msgid "doctors"
-msgstr "Doctors"
+msgstr "Pediatras"
 
 #: yema/apps/users/models.py:55
 msgid "patient"
-msgstr "Patient"
+msgstr "Paciente"
 
 #: yema/apps/users/models.py:56
 msgid "patients"
-msgstr "Patients"
+msgstr "Pacientes"
 
 #: yema/settings.py:141
 msgid "Mexican Spanish"
-msgstr "Mexican Spanish"
+msgstr "Español mexicano"
 
 #: yema/settings.py:142
 msgid "Spanish"
-msgstr "Spanish"
+msgstr "Español"
 
 #: yema/settings.py:143
 msgid "English"
-msgstr "English"
+msgstr "Inglés"
 
 #: yema/urls.py:22
 msgid "My Index Title"
-msgstr "Welcome to Yema Test admin"
+msgstr "Bienvenido al admin de Yema Test"
 
 #: yema/urls.py:23
 msgid "My Site Administration"

@@ -6,6 +6,6 @@ class AppointmentValidator:
     def validate_future_date(self, value):
         if value <= timezone.now().date():
             raise ValidationError(
-                _('%(value)s must be in the future'),
+                _('%(value)s date_future'),
                 params={'value': value},
             )

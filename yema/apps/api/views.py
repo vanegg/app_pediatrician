@@ -8,6 +8,13 @@ class AppointmentViewSet(viewsets.ModelViewSet):
     queryset = Appointment.objects.all().order_by('date', 'time')
     serializer_class = AppointmentDetailSerializer
 
+    def get_queryset(self):
+        queryset = Appointment.objects.all()
+        email = self.request.query_params.get('email', None)
+        if email is not None:
+            queryset = queryset.filter(purchaser__username=username)
+        return queryset
+
 
 class DoctorList(viewsets.ModelViewSet):
     queryset = Doctor.objects.all().order_by('user')

@@ -8,19 +8,145 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-27 22:08-0500\n"
+"POT-Creation-Date: 2020-05-31 01:22-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language-Team: Spanish <LL@li.org>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#: yema/settings.py:136 yema/settings.py:137
-msgid "Spanish"
-msgstr ""
 
-#: yema/settings.py:138
-msgid "English"
+
+#: yema/apps/appointment/admin.py:25
+msgid "accept_appointment"
+msgstr "Aceptar consulta"
+
+#: yema/apps/appointment/admin.py:29
+msgid "reject_appointment"
+msgstr "Rechazar consulta"
+
+#: yema/apps/appointment/admin.py:33
+msgid "completed_appointment"
+msgstr "Completar consulta"
+
+#: yema/apps/appointment/admin.py:39
+#, python-format
+msgid "%d story was successfully updated."
+msgid_plural "%d stories were successfully updated."
+msgstr[0] "%d consulta fue actualiza con éxito."
+msgstr[1] "%d consultas fueron actualizas con éxito."
+
+#: yema/apps/appointment/admin.py:46
+msgid "send_email_doctor"
+msgstr "Enviar correo al doctor"
+
+#: yema/apps/appointment/apps.py:7 yema/apps/appointment/models.py:37
+msgid "appointment"
+msgstr "Consulta"
+
+#: yema/apps/appointment/models.py:10
+msgid "validating"
+msgstr "Validando"
+
+#: yema/apps/appointment/models.py:11
+msgid "approved"
+msgstr "Aprobada"
+
+#: yema/apps/appointment/models.py:12
+msgid "rejected"
+msgstr "Rechazada"
+
+#: yema/apps/appointment/models.py:13
+msgid "completed"
+msgstr "Completada"
+
+#: yema/apps/appointment/models.py:18 yema/apps/users/models.py:33
+msgid "doctor"
+msgstr "Pediatra"
+
+#: yema/apps/appointment/models.py:20
+msgid "comments"
+msgstr "Comentarios"
+
+#: yema/apps/appointment/models.py:23
+msgid "appointment_date"
+msgstr "Fecha de la consulta"
+
+#: yema/apps/appointment/models.py:24
+msgid "appointment_hour"
+msgstr "Hora de la consulta"
+
+#: yema/apps/appointment/models.py:38
+msgid "appointments"
+msgstr "Consultas"
+
+#: yema/apps/appointment/services.py:15
+#, python-format
+msgid "Appointment Confirmation id: %(id)s"
+msgstr "Confirmación de consulta con el id: %(id)s"
+
+#: yema/apps/appointment/services.py:16
+#, python-format
+msgid ""
+"Hi Dr %(name)s: \n"
+"You have a new appointment of %(email)s, \n"
+"Date: %(date)s - %(time)s \n"
+"Comments: %(comments)s \n"
+"Please accept/reject it :)"
 msgstr ""
+"Hola Dr %(name)s: \n"
+"Tiene una nueva consulta del correo %(email)s, \n"
+"En la fecha: %(date)s - %(time)s \n"
+"Comentarios: %(comments)s \n"
+"Por favor acepte o rechace la conculta :)"
+
+#: yema/apps/appointment/validators.py:9
+#, python-format
+msgid "%(value)s date_future"
+msgstr "%(value)s debe ser una fecha futura"
+
+#: yema/apps/users/apps.py:7
+msgid "users"
+msgstr "Usuarios"
+
+#: yema/apps/users/models.py:19 yema/apps/users/models.py:41
+msgid "user"
+msgstr "Usuario"
+
+#: yema/apps/users/models.py:34
+msgid "doctors"
+msgstr "Pediatras"
+
+#: yema/apps/users/models.py:55
+msgid "patient"
+msgstr "Paciente"
+
+#: yema/apps/users/models.py:56
+msgid "patients"
+msgstr "Pacientes"
+
+#: yema/settings.py:141
+msgid "Mexican Spanish"
+msgstr "Español Mexicano"
+
+#: yema/settings.py:142
+msgid "Spanish"
+msgstr "Español"
+
+#: yema/settings.py:143
+msgid "English"
+msgstr "Inglés"
+
+#: yema/urls.py:22
+msgid "My Index Title"
+msgstr "Welcome to Yema Test admin"
+
+#: yema/urls.py:23
+msgid "My Site Administration"
+msgstr "Yema Test Vanessa GG"
+
+#: yema/urls.py:24
+msgid "My Site Management"
+msgstr "Yema Test Vanessa GG"
