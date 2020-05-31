@@ -12,7 +12,7 @@ class AppointmentViewSet(viewsets.ModelViewSet):
         queryset = Appointment.objects.all()
         email = self.request.query_params.get('email', None)
         if email is not None:
-            queryset = queryset.filter(purchaser__username=username)
+            queryset = queryset.filter(email=email)
         return queryset
 
 

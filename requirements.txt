@@ -1,2 +1,5 @@
 Django~=3.0.6
 djangorestframework
+psycopg2==2.7.1
+factory-boy==2.9.2
+Faker==4.1.0

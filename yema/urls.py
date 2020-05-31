@@ -26,8 +26,6 @@ admin.site.site_title = _('My Site Management')
 
 urlpatterns = i18n_patterns(
     path('admin/', admin.site.urls),
-    # path('', apps.api.urls),
-    # path('appointments/', include('yema.apps.appointment.urls')),
     path('', include('yema.apps.api.urls')),
     prefix_default_language = True
 )
