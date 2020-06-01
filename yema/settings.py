@@ -29,11 +29,11 @@ SECRET_KEY = 'f3f^la73-#s2tn3stbxa=s!l!114(-$+v$sg6td)0@a^6z-=g6'
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1']
-CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_ALLOW_ALL = True
 
-CORS_ORIGIN_WHITELIST = (
-    'http://localhost:3030',
-)
+# CORS_ORIGIN_WHITELIST = (
+#     'http://localhost:3000',
+# )
 
 # Application definition
 
