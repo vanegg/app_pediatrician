@@ -7,7 +7,7 @@ class AppointmentDetailSerializer(serializers.HyperlinkedModelSerializer):
     doctor = serializers.PrimaryKeyRelatedField(queryset=Doctor.objects.all())
     class Meta:
         model = Appointment
-        fields = ['email', 'status', 'date', 'time', 'doctor']
+        fields = ['email', 'status', 'date', 'time', 'doctor', 'comments']
         extra_kwargs = {
             'status': {
                 'read_only': True
@@ -21,7 +21,7 @@ class AppointmentDetailSerializer(serializers.HyperlinkedModelSerializer):
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
-        fields = ('first_name', 'last_name', 'email', 'username')
+        fields = ('first_name', 'last_name', 'email', 'username',)
 
 
 class DoctorSerializer(serializers.ModelSerializer):
@@ -29,7 +29,7 @@ class DoctorSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Doctor
-        fields = '__all__'
+        fields = ('user', 'pk')
 
     def create(self, validated_data):
         user = User.objects.create(**validated_data['user'])
