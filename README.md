@@ -16,4 +16,4 @@ And activate it:
 
 Install modules:
 
-### `python manage.py requirements.txt`
+### `pip install -r requirements.txt`
