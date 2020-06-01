@@ -1,2 +1,1 @@
-from unit import *
-from my_second_test import *
+from .unit_test import *

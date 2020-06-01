@@ -1,10 +1,18 @@
 from django.urls import include, path
-from api.models import Match, Market, Selection, Sport
 from rest_framework import status
 from rest_framework.test import APITestCase, RequestsClient, URLPatternsTestCase
+from yema.apps.appointment.models import Appointment
 
 
 class AppointmentsTest(APITestCase):
+    def test_list_appointments(self):
+        url = ('http://127.0.0.1:8000/es-mx/api/appointment')
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, '200')
+        self.assertEqual(Appointment.objects.count(), 1)
+        self.assertEqual(Appointment.objects.get().email, 'Real Madrid vs Barcelona')
+        
+
     def test_create_appointment(self):
         """
         Ensure we can create a new appointment object.
