@@ -17,3 +17,17 @@ And activate it:
 Install modules:
 
 ### `pip install -r requirements.txt`
+
+
+
+EXAMPLE Screenshots:
+
+![Admin](/static/img/Admin.png)
+
+![ActionsAppointments](/static/img/ActionsAppointments.png)
+
+![SendEmail](/static/img/SendEmail.png)
+
+![ApiRoot](/static/img/ApiRoot.png)
+
+![IndexDoctorAPI](/static/img/IndexDoctorAPI.png)
