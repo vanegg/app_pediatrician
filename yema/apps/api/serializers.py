@@ -15,6 +15,15 @@ class AppointmentDetailSerializer(serializers.HyperlinkedModelSerializer):
         }
 
     def create(self, validated_data):
+        if not User.objects.filter(email=validated_data['email']).exists():
+            email = validated_data['email']
+            user_data = {}
+            user_data['email'] = email
+            user_data['username'] = email
+            user_data['first_name'] = email
+            user_data['last_name'] = email
+            user_data['is_patient'] = True
+            User.objects.create(**user_data)
         return Appointment.objects.create(**validated_data)
 
 
