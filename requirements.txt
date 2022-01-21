@@ -22,7 +22,7 @@ fake-factory==0.2
 Faker==4.1.0
 filelock==3.0.12
 importlib-metadata==1.6.0
-ipython==7.13.0
+ipython==7.16.3
 ipython-genutils==0.2.0
 jedi==0.17.0
 joblib==0.14.1
